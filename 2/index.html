@@ -1,0 +1,2895 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>java进阶培训</title>
+    <!-- Styles -->
+
+    <link rel="stylesheet" media="print" href="http://blog.bboylin.com/eeyes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="http://blog.bboylin.com/eeyes/default/css/screen.css">
+
+
+    <!-- /Styles -->
+    <!-- Javascripts -->
+
+    <script type="text/javascript" src="http://blog.bboylin.com/eeyes/default/js/slides.js"></script>
+
+
+
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+
+            <header><h1>java进阶培训</h1></header>
+
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              1/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+
+            <header><h1>导师人选</h1></header>
+
+
+            <section><ul>
+<li>卫宣光</li>
+<li>老司机</li>
+<li>万旭</li>
+<li>毛今颂</li>
+<li>易凯</li>
+<li>邓林</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              2/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+
+            <header><h1>概要</h1></header>
+
+
+            <section><ul>
+<li>课件地址：<a href="http://blog.bboylin.com/eeyes/java.html">http://blog.bboylin.com/eeyes/java.html</a></li>
+<li>part1：复习基础   <ul>
+<li>冒泡排序demo(debug，值传递)</li>
+<li>抽象类和接口（demo）</li>
+<li>包的概念和访问权限</li>
+<li>作业点评</li>
+</ul>
+</li>
+<li>part2：进阶内容<ul>
+<li>异常处理</li>
+<li>简单的数据结构和算法（递归）</li>
+<li>集合框架(主要是list,map)</li>
+<li>泛型 &amp; 序列化</li>
+<li>网络编程 &amp; 多线程</li>
+<li>作业（10月8日之前交）</li>
+</ul>
+</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              3/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+
+            <header><h1>温故而知新</h1></header>
+
+
+            <section><ul>
+<li>新建一个工程演示，基本类型，声明，初始化（类和基本类型），运算符，形参实参，循环，分支，输入输出，函数。</li>
+<li>数组名的含义，下标从0开始</li>
+<li>自动拆箱装箱：<a href="http://www.importnew.com/16612.html">http://www.importnew.com/16612.html</a></li>
+<li>变量命名规范</li>
+</ul>
+<p>演示冒泡排序:</p>
+<ul>
+<li>断点调试</li>
+<li>值传递</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              4/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-5">
+          <div class="inner">
+
+            <header><h1>冒泡排序</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">BubbleSort</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 3 </span>        <span class="kr">int</span><span class="p">[]</span> <span class="nx">arr</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">};</span>
+<span class="lineno"> 4 </span>        <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+<span class="lineno"> 5 </span>            <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">j</span><span class="o">=</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">j</span><span class="o">&gt;</span><span class="nx">i</span><span class="p">;</span><span class="o">--</span><span class="nx">j</span><span class="p">){</span>
+<span class="lineno"> 6 </span>                <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+<span class="lineno"> 7 </span>                    <span class="c1">//swap(arr[j],arr[j-1]);</span>
+<span class="lineno"> 8 </span>                    <span class="nx">swap</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span><span class="nx">j</span><span class="p">,</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span> <span class="p">);</span>
+<span class="lineno"> 9 </span>                <span class="p">}</span>
+<span class="lineno">10 </span>            <span class="p">}</span>
+<span class="lineno">11 </span>        <span class="p">}</span>
+<span class="lineno">12 </span>        <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+<span class="lineno">13 </span>            <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="lineno">14 </span>        <span class="p">}</span>
+<span class="lineno">15 </span>    <span class="p">}</span>
+<span class="lineno">16 </span>
+<span class="lineno">17 </span>    <span class="kr">private</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">swap</span><span class="p">(</span><span class="kr">int</span><span class="p">[]</span> <span class="nx">arr</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">j</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">18 </span>        <span class="kr">int</span> <span class="nx">temp</span><span class="o">=</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="lineno">19 </span>        <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">=</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+<span class="lineno">20 </span>        <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="o">=</span><span class="nx">temp</span><span class="p">;</span>
+<span class="lineno">21 </span>    <span class="p">}</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span>    <span class="kr">private</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">swap</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">j</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">24 </span>        <span class="kr">int</span> <span class="nx">temp</span><span class="o">=</span><span class="nx">i</span><span class="p">;</span>
+<span class="lineno">25 </span>        <span class="nx">i</span><span class="o">=</span><span class="nx">j</span><span class="p">;</span>
+<span class="lineno">26 </span>        <span class="nx">j</span><span class="o">=</span><span class="nx">temp</span><span class="p">;</span>
+<span class="lineno">27 </span>    <span class="p">}</span>
+<span class="lineno">28 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              5/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-6">
+          <div class="inner">
+
+            <header><h1>抽象类，接口。</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kr">abstract</span> <span class="kr">class</span> <span class="nx">Bird</span><span class="p">{</span>
+<span class="lineno"> 2 </span><span class="kr">public</span> <span class="nb">String</span> <span class="nx">color</span><span class="p">;</span>
+<span class="lineno"> 3 </span><span class="kr">public</span> <span class="kr">abstract</span> <span class="k">void</span> <span class="nx">setColor</span><span class="p">(</span><span class="nb">String</span> <span class="nx">color</span><span class="p">);</span>
+<span class="lineno"> 4 </span><span class="p">}</span>
+<span class="lineno"> 5 </span><span class="kr">interface</span> <span class="nx">BirdAbility</span><span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="kr">public</span> <span class="kr">int</span> <span class="nx">fly</span><span class="p">();</span>
+<span class="lineno"> 7 </span><span class="p">}</span>
+<span class="lineno"> 8 </span><span class="kr">class</span> <span class="nx">Maque</span> <span class="kr">extends</span> <span class="nx">Bird</span> <span class="kr">implements</span> <span class="nx">BirdAbility</span><span class="p">{</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span>    <span class="err">@</span><span class="nx">Override</span>
+<span class="lineno">11 </span>    <span class="kr">public</span> <span class="k">void</span> <span class="nx">setColor</span><span class="p">(</span><span class="nb">String</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">12 </span>        <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="nx">color</span><span class="p">;</span>
+<span class="lineno">13 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&quot;麻雀的颜色是：&quot;</span><span class="o">+</span><span class="nx">color</span><span class="p">);</span>
+<span class="lineno">14 </span>    <span class="p">}</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span>    <span class="err">@</span><span class="nx">Override</span>
+<span class="lineno">17 </span>    <span class="kr">public</span> <span class="kr">int</span> <span class="nx">fly</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">18 </span>        <span class="k">return</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">19 </span>    <span class="p">}</span>
+<span class="lineno">20 </span><span class="p">}</span>
+<span class="lineno">21 </span><span class="kr">class</span> <span class="nx">Yanzi</span> <span class="kr">extends</span> <span class="nx">Bird</span> <span class="kr">implements</span> <span class="nx">BirdAbility</span><span class="p">{</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span>    <span class="err">@</span><span class="nx">Override</span>
+<span class="lineno">24 </span>    <span class="kr">public</span> <span class="k">void</span> <span class="nx">setColor</span><span class="p">(</span><span class="nb">String</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">25 </span>        <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="nx">color</span><span class="p">;</span>
+<span class="lineno">26 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&quot;燕子的颜色是：&quot;</span><span class="o">+</span><span class="nx">color</span><span class="p">);</span>
+<span class="lineno">27 </span>    <span class="p">}</span>
+<span class="lineno">28 </span>
+<span class="lineno">29 </span>    <span class="err">@</span><span class="nx">Override</span>
+<span class="lineno">30 </span>    <span class="kr">public</span> <span class="kr">int</span> <span class="nx">fly</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">31 </span>        <span class="k">return</span> <span class="mi">5</span><span class="p">;</span>
+<span class="lineno">32 </span>    <span class="p">}</span>
+<span class="lineno">33 </span><span class="p">}</span>
+<span class="lineno">34 </span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">Hello</span><span class="p">{</span>
+<span class="lineno">35 </span><span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">36 </span>    <span class="nx">Maque</span> <span class="nx">maque</span><span class="o">=</span><span class="k">new</span> <span class="nx">Maque</span><span class="p">();</span>
+<span class="lineno">37 </span>    <span class="nx">Yanzi</span> <span class="nx">yanzi</span><span class="o">=</span><span class="k">new</span> <span class="nx">Yanzi</span><span class="p">();</span>
+<span class="lineno">38 </span>    <span class="nx">maque</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="s2">&quot;黑色&quot;</span><span class="p">);</span>
+<span class="lineno">39 </span>    <span class="nx">yanzi</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="s2">&quot;白色&quot;</span><span class="p">);</span>
+<span class="lineno">40 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&quot;麻雀能飞：&quot;</span><span class="o">+</span><span class="nx">maque</span><span class="p">.</span><span class="nx">fly</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;m&quot;</span><span class="p">);</span>
+<span class="lineno">41 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&quot;燕子能飞：&quot;</span><span class="o">+</span><span class="nx">yanzi</span><span class="p">.</span><span class="nx">fly</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;m&quot;</span><span class="p">);</span>
+<span class="lineno">42 </span><span class="p">}</span>
+<span class="lineno">43 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              6/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+
+            <header><h1>运行结果</h1></header>
+
+
+            <section><blockquote>
+<p>麻雀的颜色是：黑色
+</br>燕子的颜色是：白色
+</br>麻雀能飞：10m
+</br>燕子能飞：5m</p>
+</blockquote>
+<ul>
+<li>向下转型：Man man = (Man)new Person() ; //必须强制类型转化</li>
+<li>向上转型：Person p = new Man() ; //向上转型不需要强制类型转化</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              7/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+
+            <header><h1>Java 包(package)</h1></header>
+
+
+            <section><p>为了更好地组织类，Java提供了包机制，用于区别类名的命名空间。</p>
+<p>包的作用</p>
+<p>1 把功能相似或相关的类或接口组织在同一个包中，方便类的查找和使用。</p>
+<p>2 如同文件夹一样，包也采用了树形目录的存储方式。同一个包中的类名字是不同的，不同的包中的类的名字是可以相同的，当同时调用两个不同包中相同类名的类时，应该加上包名加以区别。因此，包可以避免名字冲突。</p>
+<p>3 包也限定了访问权限，拥有包访问权限的类才能访问某个包中的类。</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              8/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+
+            <header><h1>import关键字</h1></header>
+
+
+            <section><p>为了能够使用某一个包的成员，我们需要在 Java 程序中明确导入该包。</p>
+<p>使用"import"语句可完成此功能。</p>
+<p>在 java 源文件中 import 语句应位于 package 语句之后，所有类的定义之前，可以没有，也可以有多条，举例：
+<code>import java.util.Scanner</code></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              9/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+
+            <header><h1>access control</h1></header>
+
+
+            <section><ul>
+<li>priavte 本类可见</li>
+<li>public 所有类可见</li>
+<li>protected 本包和所有子类都可见</li>
+<li>friendly 本包可见（即默认的形式）</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              10/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+
+            <header><h1>final &amp; static关键字</h1></header>
+
+
+            <section><p>final数据一般用于永不改变的编译时常量，或运行时被初始化的值，而你不希望他被改变。</p>
+<p>多用于基本类型，而不是对象引用。</p>
+<p>一个既是static又是final的域只占据一段不能变的存储空间，命名应用大写表示，各单词下划线分割，如<code>public static final int MONTH_OF_YEAR=12</code></p>
+<p>final参数表示可以读不能写，即不能改变引用的对象。final方法防止继承时改变功能</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              11/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+
+            <header><h1>类的实例化顺序</h1></header>
+
+
+            <section><p>无父类：
+静态变量、静态初始化块-&gt;变量、初始化块-&gt;构造函数。</p>
+<p>有父类：
+父类的静态（块和变量）--&gt;子类的静态（块和变量）--&gt;父类的（块和变量+构造方法）--&gt;子类的（块和变量+构造方法）</p>
+<p>所以static变量无需类实例化即可使用。</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              12/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+
+            <header><h1>String</h1></header>
+
+
+            <section><p><a href="http://www.runoob.com/java/java-string.html">http://www.runoob.com/java/java-string.html</a></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              13/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+
+            <header><h1>作业点评</h1></header>
+
+
+            <section><ul>
+<li>基础题<ul>
+<li>循环语句：设计一个程序，产生十个随机数，并存放在数组中，然后将数组排好序输出。</li>
+<li>条件语句：设计一个程序，接收两个数字输入和一个字符输入（字符必须为+，-，*，/中的一种），计算两数按照字符运算的结果并输出。</li>
+<li>写一个程序描述下这段关系，要求用到抽象类的继承和接口的实现。麻雀和燕子都是鸟类，所有鸟类都有毛色，还能改变自己的毛色，麻雀和燕子都能飞，但是飞的高度不一样。</li>
+</ul>
+</li>
+<li>挑战一下<ul>
+<li>用数组实现一个简单的栈，要求：<ul>
+<li>LIFO</li>
+<li>至少有四个函数，判断为空和栈满的函数，push和pop函数。</li>
+</ul>
+</li>
+<li>用类或者数组实现一个简单的队列，要求：<ul>
+<li>FIFO</li>
+<li>至少有四个函数，判断为空和队列已满的函数，enqueue和dequeue函数。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              14/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-15">
+          <div class="inner">
+
+            <header><h1>第一题</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">Work1</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="n">public</span> <span class="n">static</span> <span class="n">final</span> <span class="nb">int</span> <span class="n">ARRAY_SIZE</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="lineno"> 3 </span>    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>        <span class="nb">int</span> <span class="n">arr</span><span class="p">[]</span><span class="o">=</span><span class="n">new</span> <span class="nb">int</span><span class="p">[</span><span class="n">ARRAY_SIZE</span><span class="p">];</span>
+<span class="lineno"> 5 </span>        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">ARRAY_SIZE</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno"> 6 </span>        <span class="p">{</span>
+<span class="lineno"> 7 </span>            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
+<span class="lineno"> 8 </span>        <span class="p">}</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span>        <span class="n">boolean</span> <span class="n">finished</span><span class="o">=</span><span class="n">false</span><span class="p">;</span>
+<span class="lineno">11 </span>        <span class="nb">int</span> <span class="n">j</span><span class="o">=</span><span class="n">ARRAY_SIZE</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="lineno">12 </span>        <span class="k">while</span><span class="p">(</span><span class="err">!</span><span class="n">finished</span><span class="p">)</span>
+<span class="lineno">13 </span>        <span class="p">{</span>
+<span class="lineno">14 </span>            <span class="n">finished</span><span class="o">=</span><span class="n">true</span><span class="p">;</span>
+<span class="lineno">15 </span>            <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">16 </span>            <span class="p">{</span>
+<span class="lineno">17 </span>                <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+<span class="lineno">18 </span>                <span class="p">{</span>
+<span class="lineno">19 </span>                    <span class="nb">int</span> <span class="n">t</span><span class="o">=</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="lineno">20 </span>                    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="lineno">21 </span>                    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+<span class="lineno">22 </span>                    <span class="n">finished</span><span class="o">=</span><span class="n">false</span><span class="p">;</span>
+<span class="lineno">23 </span>                <span class="p">}</span>
+<span class="lineno">24 </span>            <span class="p">}</span>
+<span class="lineno">25 </span>            <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+<span class="lineno">26 </span>        <span class="p">}</span>
+<span class="lineno">27 </span>        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">ARRAY_SIZE</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">28 </span>        <span class="p">{</span>
+<span class="lineno">29 </span>            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="lineno">30 </span>            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">);</span>
+<span class="lineno">31 </span>        <span class="p">}</span>
+<span class="lineno">32 </span>    <span class="p">}</span>
+<span class="lineno">33 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              15/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-16">
+          <div class="inner">
+
+            <header><h1>第二题</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">two</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;输入第一个数字&quot;</span><span class="p">);</span>
+<span class="lineno"> 7 </span>        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
+<span class="lineno"> 8 </span>        <span class="nb">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">nextInt</span><span class="p">();</span>
+<span class="lineno"> 9 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;输入第二个数字&quot;</span><span class="p">);</span>
+<span class="lineno">10 </span>        <span class="nb">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">nextInt</span><span class="p">();</span>
+<span class="lineno">11 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;输入运算符&quot;</span><span class="p">);</span>
+<span class="lineno">12 </span>        <span class="n">String</span> <span class="n">c</span><span class="p">;</span>
+<span class="lineno">13 </span>        <span class="k">while</span> <span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">14 </span>
+<span class="lineno">15 </span>            <span class="n">c</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">next</span><span class="p">();</span>
+<span class="lineno">16 </span>            <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&quot;*&quot;</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="lineno">17 </span>                <span class="k">break</span><span class="p">;</span>
+<span class="lineno">18 </span>            <span class="k">else</span>
+<span class="lineno">19 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;请重新输入&quot;</span><span class="p">);</span>
+<span class="lineno">20 </span>        <span class="p">}</span>
+<span class="lineno">21 </span>        <span class="n">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">22 </span>            <span class="n">case</span> <span class="s2">&quot;+&quot;</span><span class="p">:</span>
+<span class="lineno">23 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s2">&quot;+&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">));</span>
+<span class="lineno">24 </span>                <span class="k">break</span><span class="p">;</span>
+<span class="lineno">25 </span>            <span class="n">case</span> <span class="s2">&quot;-&quot;</span><span class="p">:</span>
+<span class="lineno">26 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">));</span>
+<span class="lineno">27 </span>                <span class="k">break</span><span class="p">;</span>
+<span class="lineno">28 </span>            <span class="n">case</span> <span class="s2">&quot;*&quot;</span><span class="p">:</span>
+<span class="lineno">29 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">));</span>
+<span class="lineno">30 </span>                <span class="k">break</span><span class="p">;</span>
+<span class="lineno">31 </span>            <span class="n">case</span> <span class="s2">&quot;/&quot;</span><span class="p">:</span>
+<span class="lineno">32 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
+<span class="lineno">33 </span>                <span class="k">break</span><span class="p">;</span>
+<span class="lineno">34 </span>            <span class="n">default</span><span class="p">:</span>
+<span class="lineno">35 </span>                <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;wrong&quot;</span><span class="p">);</span>
+<span class="lineno">36 </span>        <span class="p">}</span>
+<span class="lineno">37 </span>
+<span class="lineno">38 </span>    <span class="p">}</span>
+<span class="lineno">39 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              16/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-17">
+          <div class="inner">
+
+            <header><h1>第三题</h1></header>
+
+
+            <section><p>良好的代码风格：单一职责原则
+建议建五个类。</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              17/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-18">
+          <div class="inner">
+
+            <header><h1>栈和队列</h1></header>
+
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              18/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-19">
+          <div class="inner">
+
+            <header><h1>怎么排查错误（很重要！敲黑板）</h1></header>
+
+
+            <section><ul>
+<li>查看日志，报错信息。</li>
+<li>查看日志，报错信息。</li>
+<li>查看日志，报错信息。（段子）</li>
+<li>ctrl+1自动纠错</li>
+<li>加断点调试</li>
+<li>多用google：<a href="http://dir.scmor.com/google/">http://dir.scmor.com/google/</a></li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              19/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
+          <div class="inner">
+
+            <header><h1>进阶内容</h1></header>
+
+
+            <section><ul>
+<li>自学能力</li>
+<li>解决问题的套路和能力。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              20/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-21">
+          <div class="inner">
+
+            <header><h1>异常处理</h1></header>
+
+
+            <section><p>异常是程序中的一些错误，但并不是所有的错误都是异常，并且错误有时候是可以避免的。
+</br>比如说，你的代码少了一个分号，那么运行出来结果是提示是错误java.lang.Error；如果你用System.out.println(11/0)，那么你是因为你用0做了除数，会抛出java.lang.ArithmeticException的异常。
+异常发生的原因有很多，通常包含以下几大类：</p>
+<ul>
+<li>用户输入了非法数据。</li>
+<li>要打开的文件不存在。</li>
+<li>网络通信时连接中断，或者JVM内存溢出。</li>
+</ul>
+<p>要理解Java异常处理是如何工作的，你需要掌握以下三种类型的异常：</p>
+<ul>
+<li>检查性异常：最具代表的检查性异常是用户错误或问题引起的异常，这是程序员无法预见的。例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。</li>
+<li>运行时异常： 运行时异常是可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。</li>
+<li>错误： 错误不是异常，而是脱离程序员控制的问题。错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，它们在编译也检查不到的。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              21/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-22">
+          <div class="inner">
+
+            <header><h1>try-catch</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="k">try</span> <span class="p">{</span>
+<span class="lineno">2 </span><span class="o">//</span> <span class="n">Code</span> <span class="n">that</span> <span class="n">might</span> <span class="n">generate</span> <span class="n">exceptions</span>
+<span class="lineno">3 </span><span class="p">}</span> <span class="n">catch</span><span class="p">(</span><span class="n">Type1</span> <span class="n">id1</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">4 </span><span class="o">//</span> <span class="n">Handle</span> <span class="n">exceptions</span> <span class="n">of</span> <span class="n">Type1</span>
+<span class="lineno">5 </span><span class="p">}</span> <span class="n">catch</span><span class="p">(</span><span class="n">Type2</span> <span class="n">id2</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">6 </span><span class="o">//</span> <span class="n">Handle</span> <span class="n">exceptions</span> <span class="n">of</span> <span class="n">Type2</span>
+<span class="lineno">7 </span><span class="p">}</span> <span class="n">catch</span><span class="p">(</span><span class="n">Type3</span> <span class="n">id3</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">8 </span><span class="o">//</span> <span class="n">Handle</span> <span class="n">exceptions</span> <span class="n">of</span> <span class="n">Type3</span>
+<span class="lineno">9 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              22/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-23">
+          <div class="inner">
+
+            <header><h1>finally</h1></header>
+
+
+            <section><p>finally关键字用来创建在try代码块后面执行的代码块。
+无论是否发生异常，finally代码块中的代码总会被执行。
+在finally代码块中，可以运行清理类型等收尾善后性质的语句。
+finally代码块出现在catch代码块最后，语法如下：</p>
+<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="k">try</span><span class="p">{</span>
+<span class="lineno">2 </span>    <span class="o">//</span> <span class="err">程序代码</span>
+<span class="lineno">3 </span><span class="p">}</span><span class="n">catch</span><span class="p">(</span><span class="err">异常类型</span><span class="mi">1</span> <span class="err">异常的变量名</span><span class="mi">1</span><span class="p">){</span>
+<span class="lineno">4 </span>    <span class="o">//</span> <span class="err">程序代码</span>
+<span class="lineno">5 </span><span class="p">}</span><span class="n">catch</span><span class="p">(</span><span class="err">异常类型</span><span class="mi">2</span> <span class="err">异常的变量名</span><span class="mi">2</span><span class="p">){</span>
+<span class="lineno">6 </span>    <span class="o">//</span> <span class="err">程序代码</span>
+<span class="lineno">7 </span><span class="p">}</span><span class="k">finally</span><span class="p">{</span>
+<span class="lineno">8 </span>    <span class="o">//</span> <span class="err">程序代码</span>
+<span class="lineno">9 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              23/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-24">
+          <div class="inner">
+
+            <header><h1>举个例子</h1></header>
+
+
+            <section><p><img alt="" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=590342419,2235034461&amp;fm=116&amp;gp=0.jpg" /></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              24/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-25">
+          <div class="inner">
+
+            <header><h1>ExcepTest</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">ExcepTest</span><span class="p">{</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="p">[]){</span>
+<span class="lineno"> 4 </span>    <span class="nb">int</span> <span class="n">a</span><span class="p">[]</span> <span class="o">=</span> <span class="n">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="lineno"> 5 </span>    <span class="k">try</span><span class="p">{</span>
+<span class="lineno"> 6 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Access element three :&quot;</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="lineno"> 7 </span>    <span class="p">}</span><span class="n">catch</span><span class="p">(</span><span class="n">ArrayIndexOutOfBoundsException</span> <span class="n">e</span><span class="p">){</span>
+<span class="lineno"> 8 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Exception thrown  :&quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+<span class="lineno"> 9 </span>    <span class="p">}</span>
+<span class="lineno">10 </span>    <span class="k">finally</span><span class="p">{</span>
+<span class="lineno">11 </span>        <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="lineno">12 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;First element value: &quot;</span> <span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="lineno">13 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;The finally statement is executed&quot;</span><span class="p">);</span>
+<span class="lineno">14 </span>    <span class="p">}</span>
+<span class="lineno">15 </span><span class="p">}</span>
+<span class="lineno">16 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              25/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-26">
+          <div class="inner">
+
+            <header><h1>运行结果</h1></header>
+
+
+            <section><blockquote>
+<p>Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3</br>
+First element value: 6</br>
+The finally statement is executed</p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              26/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-27">
+          <div class="inner">
+
+            <header><h1>注意事项</h1></header>
+
+
+            <section><ul>
+<li>catch不能独立于try存在。</li>
+<li>在try/catch后面添加finally块并非强制性要求的。</li>
+<li>try代码后不能既没catch块也没finally块。</li>
+<li>try, catch, finally块之间不能添加任何代码。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              27/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-28">
+          <div class="inner">
+
+            <header><h1>Java 内置异常类</h1></header>
+
+
+            <section><p><img alt="" src="http://blog.bboylin.com/pic/e.png" /></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              28/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-29">
+          <div class="inner">
+
+            <header><h1>简单的数据结构和算法</h1></header>
+
+
+            <section><ul>
+<li>表（list）：链表，线性表。</li>
+<li>栈</li>
+<li>队列</li>
+<li>堆</li>
+<li>树</li>
+<li>图</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              29/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-30">
+          <div class="inner">
+
+            <header><h1>递归</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="c1">//使用递归方法实现斐波那契数列</span>
+<span class="lineno">2 </span><span class="kr">public</span> <span class="kr">int</span> <span class="nx">feibonaci1</span><span class="p">(</span><span class="kr">int</span> <span class="nx">n</span><span class="p">){</span>
+<span class="lineno">3 </span>    <span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="k">return</span> <span class="mi">0</span><span class="p">;}</span>
+<span class="lineno">4 </span>    <span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="k">return</span> <span class="mi">1</span><span class="p">;}</span>
+<span class="lineno">5 </span>    <span class="k">return</span> <span class="nx">feibonaci1</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nx">feibonaci1</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+<span class="lineno">6 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              30/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-31">
+          <div class="inner">
+
+            <header><h1>非递归/循环</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="c1">//使用非递归方法实现斐波那契数列</span>
+<span class="lineno"> 2 </span><span class="kr">public</span> <span class="kr">int</span> <span class="nx">feibonaci2</span><span class="p">(</span><span class="kr">int</span> <span class="nx">n</span><span class="p">){</span>
+<span class="lineno"> 3 </span>    <span class="kr">int</span> <span class="nx">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kr">int</span><span class="p">[</span><span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="lineno"> 4 </span>    <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="lineno"> 5 </span>    <span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="lineno"> 6 </span>    <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">n</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno"> 7 </span>        <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span>
+<span class="lineno"> 8 </span>    <span class="p">}</span>
+<span class="lineno"> 9 </span>    <span class="k">return</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
+<span class="lineno">10 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              31/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-32">
+          <div class="inner">
+
+            <header><h1>对比</h1></header>
+
+
+            <section><p>效率上，递归比循环慢。一般递归的实现是通过调用函数本身，函数调用的时候，每次调用时要做地址保存，参数传递等，这是通过一个递归工作栈实现的。具体是每次调用函数本身要保存的内容包括：局部变量、形参、调用函数地址、返回值。</p>
+<p>递归优点：代码简洁、清晰，并且容易验证正确性。缺点：容易堆栈溢出，执行效率低。</p>
+<p>java和python不支持尾递归优化。</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              32/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-33">
+          <div class="inner">
+
+            <header><h1>泛型</h1></header>
+
+
+            <section><p>泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。</p>
+<blockquote>
+<p>假定我们有这样一个需求：写一个排序方法，能够对整形数组、字符串数组甚至其他任何类型的数组进行排序，该如何实现？
+</br>答案是可以使用 Java 泛型。
+</br>使用 Java 泛型的概念，我们可以写一个泛型方法来对一个对象数组排序。然后，调用该泛型方法来对整型数组、浮点数数组、字符串数组等进行排序。</p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              33/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-34">
+          <div class="inner">
+
+            <header><h1>定义泛型方法的规则</h1></header>
+
+
+            <section><ul>
+<li>所有泛型方法声明都有一个类型参数声明部分（由尖括号分隔），该类型参数声明部分在方法返回类型之前（在下面例子中的<E>）。</li>
+<li>每一个类型参数声明部分包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。</li>
+<li>类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。</li>
+<li>泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像int,double,char的等）。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              34/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-35">
+          <div class="inner">
+
+            <header><h1>实例</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">GenericMethodTest</span>
+<span class="lineno"> 2 </span><span class="p">{</span>
+<span class="lineno"> 3 </span><span class="c1">// 泛型方法 printArray                         </span>
+<span class="lineno"> 4 </span><span class="kr">public</span> <span class="kr">static</span> <span class="o">&lt;</span> <span class="nx">E</span> <span class="o">&gt;</span> <span class="k">void</span> <span class="nx">printArray</span><span class="p">(</span> <span class="nx">E</span><span class="p">[]</span> <span class="nx">inputArray</span> <span class="p">)</span>
+<span class="lineno"> 5 </span><span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="c1">// 输出数组元素            </span>
+<span class="lineno"> 7 </span>        <span class="k">for</span> <span class="p">(</span> <span class="nx">E</span> <span class="nx">element</span> <span class="o">:</span> <span class="nx">inputArray</span> <span class="p">){</span>
+<span class="lineno"> 8 </span>            <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">printf</span><span class="p">(</span> <span class="s2">&quot;%s &quot;</span><span class="p">,</span> <span class="nx">element</span> <span class="p">);</span>
+<span class="lineno"> 9 </span>        <span class="p">}</span>
+<span class="lineno">10 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">();</span>
+<span class="lineno">11 </span>    <span class="p">}</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span>    <span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span> <span class="nb">String</span> <span class="nx">args</span><span class="p">[]</span> <span class="p">)</span>
+<span class="lineno">14 </span>    <span class="p">{</span>
+<span class="lineno">15 </span>        <span class="c1">// 创建不同类型数组： Integer, Double 和 Character</span>
+<span class="lineno">16 </span>        <span class="nx">Integer</span><span class="p">[]</span> <span class="nx">intArray</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span>
+<span class="lineno">17 </span>        <span class="nx">Double</span><span class="p">[]</span> <span class="nx">doubleArray</span> <span class="o">=</span> <span class="p">{</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">4.4</span> <span class="p">};</span>
+<span class="lineno">18 </span>        <span class="nx">Character</span><span class="p">[]</span> <span class="nx">charArray</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span> <span class="p">};</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span> <span class="s2">&quot;整型数组元素为:&quot;</span> <span class="p">);</span>
+<span class="lineno">21 </span>        <span class="nx">printArray</span><span class="p">(</span> <span class="nx">intArray</span>  <span class="p">);</span> <span class="c1">// 传递一个整型数组</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span> <span class="s2">&quot;\n双精度型数组元素为:&quot;</span> <span class="p">);</span>
+<span class="lineno">24 </span>        <span class="nx">printArray</span><span class="p">(</span> <span class="nx">doubleArray</span> <span class="p">);</span> <span class="c1">// 传递一个双精度型数组</span>
+<span class="lineno">25 </span>
+<span class="lineno">26 </span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span> <span class="s2">&quot;\n字符型数组元素为:&quot;</span> <span class="p">);</span>
+<span class="lineno">27 </span>        <span class="nx">printArray</span><span class="p">(</span> <span class="nx">charArray</span> <span class="p">);</span> <span class="c1">// 传递一个字符型数组</span>
+<span class="lineno">28 </span>    <span class="p">}</span>
+<span class="lineno">29 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              35/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-36">
+          <div class="inner">
+
+            <header><h1>运行结果</h1></header>
+
+
+            <section><blockquote>
+<p>整型数组元素为:
+</br>1 2 3 4 5
+</br>
+双精度型数组元素为:</br>
+1.1 2.2 3.3 4.4
+</br>
+字符型数组元素为:</br>
+H E L L O </p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              36/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-37">
+          <div class="inner">
+
+            <header><h1>有界类型参数</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">MaximumTest</span>
+<span class="lineno"> 2 </span><span class="p">{</span>
+<span class="lineno"> 3 </span><span class="c1">// 比较三个值并返回最大值</span>
+<span class="lineno"> 4 </span><span class="kr">public</span> <span class="kr">static</span> <span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">Comparable</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;&gt;</span> <span class="nx">T</span> <span class="nx">maximum</span><span class="p">(</span><span class="nx">T</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">T</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">T</span> <span class="nx">z</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="nx">T</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span> <span class="c1">// 假设x是初始最大值</span>
+<span class="lineno"> 7 </span>    <span class="k">if</span> <span class="p">(</span> <span class="nx">y</span><span class="p">.</span><span class="nx">compareTo</span><span class="p">(</span> <span class="nx">max</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">){</span>
+<span class="lineno"> 8 </span>        <span class="nx">max</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span> <span class="c1">//y 更大</span>
+<span class="lineno"> 9 </span>    <span class="p">}</span>
+<span class="lineno">10 </span>    <span class="k">if</span> <span class="p">(</span> <span class="nx">z</span><span class="p">.</span><span class="nx">compareTo</span><span class="p">(</span> <span class="nx">max</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">){</span>
+<span class="lineno">11 </span>        <span class="nx">max</span> <span class="o">=</span> <span class="nx">z</span><span class="p">;</span> <span class="c1">// 现在 z 更大           </span>
+<span class="lineno">12 </span>    <span class="p">}</span>
+<span class="lineno">13 </span>    <span class="k">return</span> <span class="nx">max</span><span class="p">;</span> <span class="c1">// 返回最大对象</span>
+<span class="lineno">14 </span><span class="p">}</span>
+<span class="lineno">15 </span><span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span> <span class="nb">String</span> <span class="nx">args</span><span class="p">[]</span> <span class="p">)</span>
+<span class="lineno">16 </span><span class="p">{</span>
+<span class="lineno">17 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">printf</span><span class="p">(</span> <span class="s2">&quot;%d, %d 和 %d 中最大的数为 %d\n\n&quot;</span><span class="p">,</span>
+<span class="lineno">18 </span>                <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">maximum</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">)</span> <span class="p">);</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">printf</span><span class="p">(</span> <span class="s2">&quot;%.1f, %.1f 和 %.1f 中最大的数为 %.1f\n\n&quot;</span><span class="p">,</span>
+<span class="lineno">21 </span>                <span class="mf">6.6</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">,</span> <span class="nx">maximum</span><span class="p">(</span> <span class="mf">6.6</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">7.7</span> <span class="p">)</span> <span class="p">);</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">printf</span><span class="p">(</span> <span class="s2">&quot;%s, %s 和 %s 中最大的数为 %s\n&quot;</span><span class="p">,</span><span class="s2">&quot;pear&quot;</span><span class="p">,</span>
+<span class="lineno">24 </span>        <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="nx">maximum</span><span class="p">(</span> <span class="s2">&quot;pear&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span> <span class="p">)</span> <span class="p">);</span>
+<span class="lineno">25 </span><span class="p">}</span>
+<span class="lineno">26 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              37/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-38">
+          <div class="inner">
+
+            <header><h1>运行结果</h1></header>
+
+
+            <section><blockquote>
+<p>3, 4 和 5 中最大的数为 5</br>
+6.6, 8.8 和 7.7 中最大的数为 8.8</br>
+pear, apple 和 orange 中最大的数为 pear</br></p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              38/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-39">
+          <div class="inner">
+
+            <header><h1>泛型类</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">package</span> <span class="n">test</span><span class="p">;</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">Stats</span><span class="o">&lt;</span><span class="n">T</span> <span class="n">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span>    <span class="n">private</span> <span class="n">T</span><span class="p">[]</span> <span class="n">nums</span><span class="p">;</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span>    <span class="n">public</span> <span class="n">Stats</span><span class="p">(</span><span class="n">T</span><span class="p">[]</span> <span class="n">o</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 8 </span>        <span class="n">nums</span> <span class="o">=</span> <span class="n">o</span><span class="p">;</span>
+<span class="lineno"> 9 </span>    <span class="p">}</span>
+<span class="lineno">10 </span>    <span class="n">public</span> <span class="n">double</span> <span class="n">average</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">11 </span>        <span class="n">double</span> <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="n">d</span><span class="p">;</span>
+<span class="lineno">12 </span>        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">13 </span>            <span class="nb">sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">();</span>
+<span class="lineno">14 </span>        <span class="k">return</span> <span class="nb">sum</span> <span class="o">/</span><span class="n">nums</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+<span class="lineno">15 </span>    <span class="p">}</span>
+<span class="lineno">16 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              39/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-40">
+          <div class="inner">
+
+            <header><h1>泛型类</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">package</span> <span class="n">test</span><span class="p">;</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">BoundsDemo</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5 </span>        <span class="n">Integer</span> <span class="n">inums</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<span class="lineno"> 6 </span>        <span class="n">Stats</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">iob</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Stats</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">inums</span><span class="p">);</span>
+<span class="lineno"> 7 </span>        <span class="n">double</span> <span class="n">v</span> <span class="o">=</span> <span class="n">iob</span><span class="o">.</span><span class="n">average</span><span class="p">();</span>
+<span class="lineno"> 8 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;iob average is &quot;</span> <span class="o">+</span> <span class="n">v</span><span class="p">);</span>
+<span class="lineno"> 9 </span>        <span class="n">Double</span> <span class="n">dnums</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">2.2</span><span class="p">,</span><span class="mf">3.3</span><span class="p">,</span><span class="mf">4.4</span><span class="p">,</span><span class="mf">5.5</span><span class="p">};</span>
+<span class="lineno">10 </span>        <span class="n">Stats</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">dob</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Stats</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">dnums</span><span class="p">);</span>
+<span class="lineno">11 </span>        <span class="n">double</span> <span class="n">w</span> <span class="o">=</span> <span class="n">dob</span><span class="o">.</span><span class="n">average</span><span class="p">();</span>
+<span class="lineno">12 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;dob average is &quot;</span> <span class="o">+</span> <span class="n">w</span><span class="p">);</span>
+<span class="lineno">13 </span>    <span class="p">}</span>
+<span class="lineno">14 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              40/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-41">
+          <div class="inner">
+
+            <header><h1>序列化</h1></header>
+
+
+            <section><p>简单介绍，自己看：<a href="http://www.runoob.com/java/java-serialization.html">http://www.runoob.com/java/java-serialization.html</a></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              41/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-42">
+          <div class="inner">
+
+            <header><h1>集合框架</h1></header>
+
+
+            <section><p><img alt="" src="https://camo.githubusercontent.com/31ac9e9b08d86b9604b9f86e77acbc929e3062c8/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f32303134303930373230303334323033393f77617465726d61726b2f322f746578742f6148523063446f764c324a736232637559334e6b626935755a5851766157467064476b3d2f666f6e742f3561364c354c32542f666f6e7473697a652f3430302f66696c6c2f49304a42516b46434d413d3d2f646973736f6c76652f37302f677261766974792f536f75746845617374" /></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              42/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-43">
+          <div class="inner">
+
+            <header><h1>map接口</h1></header>
+
+
+            <section><p>键值一一映射。粗略检查随机数算法的准确性。</p>
+<p><img alt="" src="http://blog.bboylin.com/pic/2016-09-28_132634.png" /></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              43/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-44">
+          <div class="inner">
+
+            <header><h1>TreeMap和HashMap类</h1></header>
+
+
+            <section><ul>
+<li>HashMap：基于哈希表的实现，不按顺序插入，无序。插入，删除较快，常用。</li>
+<li>TreeMap：基于红黑树的实现，总是有序,遍历较快。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              44/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-45">
+          <div class="inner">
+
+            <header><h1>HashMap</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kn">import</span> <span class="nn">java.util.</span><span class="o">*</span><span class="p">;</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">CollectionsDemo</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="n">Map</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HashMap</span><span class="p">();</span>
+<span class="lineno"> 7 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Zara&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">);</span>
+<span class="lineno"> 8 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Mahnaz&quot;</span><span class="p">,</span> <span class="s2">&quot;31&quot;</span><span class="p">);</span>
+<span class="lineno"> 9 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Ayan&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">);</span>
+<span class="lineno">10 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Daisy&quot;</span><span class="p">,</span> <span class="s2">&quot;14&quot;</span><span class="p">);</span>
+<span class="lineno">11 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">();</span>
+<span class="lineno">12 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot; Map Elements&quot;</span><span class="p">);</span>
+<span class="lineno">13 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">m1</span><span class="p">);</span>
+<span class="lineno">14 </span><span class="p">}</span>
+<span class="lineno">15 </span><span class="p">}</span>
+</pre></div>
+
+<blockquote>
+<p>Map Elements</br>
+  {Daisy=14, Ayan=12, Zara=8, Mahnaz=31}</p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              45/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-46">
+          <div class="inner">
+
+            <header><h1>TreeMap</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kn">import</span> <span class="nn">java.util.</span><span class="o">*</span><span class="p">;</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">CollectionsDemo</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="n">Map</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">TreeMap</span><span class="p">();</span>
+<span class="lineno"> 7 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Zara&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">);</span>
+<span class="lineno"> 8 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Mahnaz&quot;</span><span class="p">,</span> <span class="s2">&quot;31&quot;</span><span class="p">);</span>
+<span class="lineno"> 9 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Ayan&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">);</span>
+<span class="lineno">10 </span>    <span class="n">m1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Daisy&quot;</span><span class="p">,</span> <span class="s2">&quot;14&quot;</span><span class="p">);</span>
+<span class="lineno">11 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">();</span>
+<span class="lineno">12 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot; Map Elements&quot;</span><span class="p">);</span>
+<span class="lineno">13 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">m1</span><span class="p">);</span>
+<span class="lineno">14 </span><span class="p">}</span>
+<span class="lineno">15 </span><span class="p">}</span>
+</pre></div>
+
+<blockquote>
+<p>Map Elements</br>
+  {Ayan=12, Daisy=14, Mahnaz=31, Zara=8}</p>
+</blockquote></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              46/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-47">
+          <div class="inner">
+
+            <header><h1>Collection接口</h1></header>
+
+
+            <section><p>Collection是最基本的集合接口，一个Collection代表一组Object，即Collection的元素（Elements）。一些Collection允许相同的元素（list）而另一些（set）不行。一些能排序（treeset）而另一些（hashset）不行。Java SDK不提供直接继承自Collection的类，Java SDK提供的类都是继承自Collection的“子接口”如List和Set。</p>
+<div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">public</span> <span class="n">interface</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">extends</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="o">//</span><span class="err">每个方法含义</span>
+<span class="lineno"> 3 </span><span class="nb">int</span> <span class="n">size</span><span class="p">();</span>
+<span class="lineno"> 4 </span><span class="n">boolean</span> <span class="n">isEmpty</span><span class="p">();</span>
+<span class="lineno"> 5 </span><span class="n">void</span> <span class="n">clear</span><span class="p">();</span>
+<span class="lineno"> 6 </span><span class="n">boolean</span> <span class="n">contains</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">);</span>
+<span class="lineno"> 7 </span><span class="n">boolean</span> <span class="n">add</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">);</span>
+<span class="lineno"> 8 </span><span class="n">boolean</span> <span class="n">remove</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">);</span>
+<span class="lineno"> 9 </span><span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">iterator</span><span class="p">();</span>
+<span class="lineno">10 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              47/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-48">
+          <div class="inner">
+
+            <header><h1>iterator接口</h1></header>
+
+
+            <section><p>实现Iterable接口的集合必须提供一个叫iterator的方法，该方法放回一个iterator类型的对象。</p>
+<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">public</span> <span class="n">interface</span> <span class="n">iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span>
+<span class="lineno">2 </span><span class="n">boolean</span> <span class="n">hasNext</span><span class="p">();</span>
+<span class="lineno">3 </span><span class="n">T</span> <span class="nb">next</span><span class="p">();</span>
+<span class="lineno">4 </span><span class="n">void</span> <span class="n">remove</span><span class="p">();</span>
+<span class="lineno">5 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              48/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-49">
+          <div class="inner">
+
+            <header><h1>例子</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="nx">List</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="p">();</span>
+<span class="lineno"> 2 </span><span class="nx">l</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;aa&quot;</span><span class="p">);</span>
+<span class="lineno"> 3 </span><span class="nx">l</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;bb&quot;</span><span class="p">);</span>
+<span class="lineno"> 4 </span><span class="nx">l</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;cc&quot;</span><span class="p">);</span>
+<span class="lineno"> 5 </span><span class="k">for</span> <span class="p">(</span><span class="nx">Iterator</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">l</span><span class="p">.</span><span class="nx">iterator</span><span class="p">();</span> <span class="nx">i</span><span class="p">.</span><span class="nx">hasNext</span><span class="p">();)</span> <span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="nb">String</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="nx">i</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<span class="lineno"> 7 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="lineno"> 8 </span><span class="p">}</span>
+<span class="lineno"> 9 </span><span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="lineno">10 </span><span class="nx">Iterator</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">l</span><span class="p">.</span><span class="nx">iterator</span><span class="p">();</span>
+<span class="lineno">11 </span><span class="k">while</span> <span class="p">(</span><span class="nx">it</span><span class="p">.</span><span class="nx">hasNext</span><span class="p">())</span> <span class="p">{</span>
+<span class="lineno">12 </span>    <span class="nb">String</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<span class="lineno">13 </span>    <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="lineno">14 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              49/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-50">
+          <div class="inner">
+
+            <header><h1>List</h1></header>
+
+
+            <section><ul>
+<li>ArrayList，随机访问元素快，中间插入和删除操作慢。</li>
+<li>LinkedList，随机访问慢，但是中间插入和删除快，类似链表。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              50/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-51">
+          <div class="inner">
+
+            <header><h1>list 方法</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="lineno"> 2 </span><span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="k">class</span> <span class="nc">Member</span><span class="p">{</span>
+<span class="lineno"> 5 </span>    <span class="nb">int</span> <span class="n">age</span><span class="p">;</span>
+<span class="lineno"> 6 </span>    <span class="n">Member</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="p">){</span>
+<span class="lineno"> 7 </span>        <span class="n">age</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="lineno"> 8 </span>    <span class="p">}</span>
+<span class="lineno"> 9 </span>    <span class="n">public</span> <span class="n">String</span> <span class="n">toString</span><span class="p">(){</span>
+<span class="lineno">10 </span>        <span class="k">return</span> <span class="s2">&quot;member&quot;</span><span class="o">+</span><span class="n">age</span><span class="p">;</span>
+<span class="lineno">11 </span>    <span class="p">}</span>
+<span class="lineno">12 </span><span class="p">}</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">Hello</span> <span class="p">{</span>
+<span class="lineno">15 </span>    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">16 </span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">Member</span><span class="o">&gt;</span> <span class="n">members</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Member</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="lineno">17 </span>        <span class="n">Member</span> <span class="n">member1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span>        <span class="o">//</span><span class="err">添加元素</span>
+<span class="lineno">20 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member1</span><span class="p">);</span>
+<span class="lineno">21 </span>
+<span class="lineno">22 </span>        <span class="o">//</span><span class="err">判断容器是否为空</span>
+<span class="lineno">23 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">());</span>
+<span class="lineno">24 </span>
+<span class="lineno">25 </span>        <span class="o">//</span><span class="err">判断容器是否包含该元素</span>
+<span class="lineno">26 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">member1</span><span class="p">));</span>
+<span class="lineno">27 </span>
+<span class="lineno">28 </span>        <span class="o">//</span><span class="err">显示索引</span>
+<span class="lineno">29 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">member1</span><span class="p">));</span>
+<span class="lineno">30 </span>
+<span class="lineno">31 </span>        <span class="o">//</span><span class="err">移除元素</span>
+<span class="lineno">32 </span>        <span class="n">members</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">member1</span><span class="p">);</span>
+<span class="lineno">33 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="p">);</span>
+<span class="lineno">34 </span>
+<span class="lineno">35 </span>        <span class="n">Member</span> <span class="n">member2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="lineno">36 </span>        <span class="n">Member</span> <span class="n">member3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="lineno">37 </span>        <span class="n">Member</span> <span class="n">member4</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="lineno">38 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member2</span><span class="p">);</span>
+<span class="lineno">39 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member3</span><span class="p">);</span>
+<span class="lineno">40 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member4</span><span class="p">);</span>
+<span class="lineno">41 </span>
+<span class="lineno">42 </span>        <span class="o">//</span><span class="err">类似</span><span class="n">subString</span><span class="err">，从索引</span><span class="mi">0</span><span class="err">开始截取到</span><span class="mi">1</span><span class="err">，包含</span><span class="mi">0</span><span class="err">和</span><span class="mi">1</span>
+<span class="lineno">43 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="o">.</span><span class="n">subList</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="lineno">44 </span>
+<span class="lineno">45 </span>        <span class="o">//</span><span class="err">移除</span> <span class="err">不同于</span><span class="n">remove</span>
+<span class="lineno">46 </span>        <span class="o">//</span><span class="n">removeAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="err">?</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span>
+<span class="lineno">47 </span>        <span class="o">//</span><span class="n">remove</span><span class="p">(</span><span class="nb">int</span> <span class="n">index</span><span class="p">)</span>   <span class="n">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span>
+<span class="lineno">48 </span>        <span class="n">members</span><span class="o">.</span><span class="n">removeAll</span><span class="p">(</span><span class="n">members</span><span class="p">);</span>
+<span class="lineno">49 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="p">);</span>
+<span class="lineno">50 </span>
+<span class="lineno">51 </span>        <span class="o">//</span><span class="n">remove</span><span class="err">遍历删除时候的陷阱</span>
+<span class="lineno">52 </span>        <span class="n">Member</span> <span class="n">member5</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="lineno">53 </span>        <span class="n">Member</span> <span class="n">member6</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="lineno">54 </span>        <span class="n">Member</span> <span class="n">member7</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="lineno">55 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member5</span><span class="p">);</span>
+<span class="lineno">56 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member6</span><span class="p">);</span>
+<span class="lineno">57 </span>        <span class="n">members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">member7</span><span class="p">);</span>
+<span class="lineno">58 </span>        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">members</span><span class="o">.</span><span class="n">size</span><span class="p">();</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+<span class="lineno">59 </span>            <span class="n">members</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="lineno">60 </span>        <span class="p">}</span>
+<span class="lineno">61 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">members</span><span class="p">);</span>
+<span class="lineno">62 </span>    <span class="p">}</span>
+<span class="lineno">63 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              51/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-52">
+          <div class="inner">
+
+            <header><h1>多线程</h1></header>
+
+
+            <section><ul>
+<li>进程</li>
+<li>线程</li>
+<li>多线程的好处<ul>
+<li>一边吃饭一边学习一边打游戏还和女朋友聊天。</li>
+<li>执行耗时操作，比如网络，IO</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="http://www.runoob.com/wp-content/uploads/2014/01/java-thread.jpg" /></p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              52/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-53">
+          <div class="inner">
+
+            <header><h1>写java多线程的两种方法</h1></header>
+
+
+            <section><ul>
+<li>通过实现Runnable接口；</li>
+<li>通过继承Thread类本身。</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              53/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-54">
+          <div class="inner">
+
+            <header><h1>继承thread类</h1></header>
+
+
+            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">ThreadExtends</span> <span class="n">extends</span> <span class="n">Thread</span><span class="p">{</span>
+<span class="lineno"> 2 </span><span class="n">public</span> <span class="n">void</span> <span class="n">run</span><span class="p">(){</span>
+<span class="lineno"> 3 </span>    <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno"> 4 </span>        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;count:&quot;</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
+<span class="lineno"> 5 </span>    <span class="p">}</span>
+<span class="lineno"> 6 </span><span class="p">}</span>
+<span class="lineno"> 7 </span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="p">[]){</span>
+<span class="lineno"> 8 </span>    <span class="n">ThreadExtends</span> <span class="n">te</span><span class="o">=</span><span class="n">new</span> <span class="n">ThreadExtends</span><span class="p">();</span>
+<span class="lineno"> 9 </span>    <span class="n">te</span><span class="o">.</span><span class="n">start</span><span class="p">();</span>
+<span class="lineno">10 </span><span class="p">}</span>
+<span class="lineno">11 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              54/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-55">
+          <div class="inner">
+
+            <header><h1>实现Runnable接口</h1></header>
+
+
+            <section><p>当使用 runnable 接口时，您不能直接创建所需类的对象并运行它；必须从 Thread 类的一个实例内部运行它</p>
+<div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="n">public</span> <span class="k">class</span> <span class="nc">Myrunable</span> <span class="n">implements</span> <span class="n">Runnable</span> <span class="p">{</span>
+<span class="lineno"> 2 </span><span class="n">public</span> <span class="n">void</span> <span class="n">run</span><span class="p">(){</span>
+<span class="lineno"> 3 </span>    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">Thread</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">());</span>
+<span class="lineno"> 4 </span><span class="p">}</span>
+<span class="lineno"> 5 </span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="p">[]){</span>
+<span class="lineno"> 6 </span><span class="n">Myrunable</span> <span class="n">t1</span><span class="o">=</span><span class="n">new</span> <span class="n">Myrunable</span><span class="p">();</span>
+<span class="lineno"> 7 </span><span class="n">Myrunable</span> <span class="n">t2</span><span class="o">=</span><span class="n">new</span> <span class="n">Myrunable</span><span class="p">();</span>
+<span class="lineno"> 8 </span><span class="n">Thread</span> <span class="n">th1</span><span class="o">=</span><span class="n">new</span> <span class="n">Thread</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="s2">&quot;mythread1&quot;</span><span class="p">);</span>
+<span class="lineno"> 9 </span><span class="n">Thread</span> <span class="n">th2</span><span class="o">=</span><span class="n">new</span> <span class="n">Thread</span><span class="p">(</span><span class="n">t2</span><span class="p">);</span>
+<span class="lineno">10 </span><span class="n">th2</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">&quot;mythread2&quot;</span><span class="p">);</span>
+<span class="lineno">11 </span><span class="n">th1</span><span class="o">.</span><span class="n">start</span><span class="p">();</span>
+<span class="lineno">12 </span><span class="n">th2</span><span class="o">.</span><span class="n">start</span><span class="p">();</span>
+<span class="lineno">13 </span><span class="p">}</span>
+<span class="lineno">14 </span><span class="p">}</span>
+</pre></div>
+</section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              55/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-56">
+          <div class="inner">
+
+            <header><h1>网络编程</h1></header>
+
+
+            <section><p>网络编程是java中最有趣的一个部分之一，没有网络很多APP都大打折扣。
+利用网络编程可以实现很多有趣的idea，比如多人聊天室，游戏单机改联机对战，手机控制电脑。
+这部分先不讲，基础较好的可以先自学。</p></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              56/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-57">
+          <div class="inner">
+
+            <header><h1>I/O</h1></header>
+
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              57/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-58">
+          <div class="inner">
+
+            <header><h1>android studio</h1></header>
+
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              58/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-59">
+          <div class="inner">
+
+            <header><h1>作业</h1></header>
+
+
+            <section><ul>
+<li>写一个多线程程序，两个线程分别执行递归计算斐波那契/循环计算斐波那契第N项的值，N的值自己看着定，根据输出比较哪个方法快。</li>
+<li>用hashmap,TreeMap,arraylist分别存储若干个学生类的实例，每个学生类有学号和姓名两个成员变量，并遍历输出每个学生的信息。</li>
+<li>编写程序将数组排序，要求用泛型方法，数组元素类型可以是int,double,char。元素类型可以更多的话更好</li>
+</ul></section>
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              59/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+      <!-- slide source: java.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-60">
+          <div class="inner">
+
+            <header><h1>谢谢</h1></header>
+
+
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+
+            </section>
+          </div>
+          <footer>
+
+            <aside class="source">
+              Source: <a href="java.md">java.md</a>
+            </aside>
+
+            <aside class="page_number">
+              60/60
+            </aside>
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+
+      <tr id="toc-row-1">
+        <th><a href="#slide1">java进阶培训</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+
+
+      <tr id="toc-row-2">
+        <th><a href="#slide2">导师人选</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+
+
+      <tr id="toc-row-3">
+        <th><a href="#slide3">概要</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+
+
+      <tr id="toc-row-4">
+        <th><a href="#slide4">温故而知新</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+
+
+      <tr id="toc-row-5">
+        <th><a href="#slide5">冒泡排序</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+
+
+      <tr id="toc-row-6">
+        <th><a href="#slide6">抽象类，接口。</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+
+
+      <tr id="toc-row-7">
+        <th><a href="#slide7">运行结果</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+
+
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Java 包(package)</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+
+
+      <tr id="toc-row-9">
+        <th><a href="#slide9">import关键字</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+
+
+      <tr id="toc-row-10">
+        <th><a href="#slide10">access control</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+
+
+      <tr id="toc-row-11">
+        <th><a href="#slide11">final &amp; static关键字</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+
+
+      <tr id="toc-row-12">
+        <th><a href="#slide12">类的实例化顺序</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+
+
+      <tr id="toc-row-13">
+        <th><a href="#slide13">String</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+
+
+      <tr id="toc-row-14">
+        <th><a href="#slide14">作业点评</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+
+
+      <tr id="toc-row-15">
+        <th><a href="#slide15">第一题</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+
+
+      <tr id="toc-row-16">
+        <th><a href="#slide16">第二题</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+
+
+      <tr id="toc-row-17">
+        <th><a href="#slide17">第三题</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+
+
+      <tr id="toc-row-18">
+        <th><a href="#slide18">栈和队列</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+
+
+      <tr id="toc-row-19">
+        <th><a href="#slide19">怎么排查错误（很重要！敲黑板）</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+
+
+      <tr id="toc-row-20">
+        <th><a href="#slide20">进阶内容</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+
+
+      <tr id="toc-row-21">
+        <th><a href="#slide21">异常处理</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+
+
+      <tr id="toc-row-22">
+        <th><a href="#slide22">try-catch</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+
+
+      <tr id="toc-row-23">
+        <th><a href="#slide23">finally</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+
+
+      <tr id="toc-row-24">
+        <th><a href="#slide24">举个例子</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+
+
+      <tr id="toc-row-25">
+        <th><a href="#slide25">ExcepTest</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+
+
+      <tr id="toc-row-26">
+        <th><a href="#slide26">运行结果</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+
+
+      <tr id="toc-row-27">
+        <th><a href="#slide27">注意事项</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+
+
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Java 内置异常类</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+
+
+      <tr id="toc-row-29">
+        <th><a href="#slide29">简单的数据结构和算法</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+
+
+      <tr id="toc-row-30">
+        <th><a href="#slide30">递归</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+
+
+      <tr id="toc-row-31">
+        <th><a href="#slide31">非递归/循环</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+
+
+      <tr id="toc-row-32">
+        <th><a href="#slide32">对比</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+
+
+      <tr id="toc-row-33">
+        <th><a href="#slide33">泛型</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+
+
+      <tr id="toc-row-34">
+        <th><a href="#slide34">定义泛型方法的规则</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+
+
+      <tr id="toc-row-35">
+        <th><a href="#slide35">实例</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+
+
+      <tr id="toc-row-36">
+        <th><a href="#slide36">运行结果</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+
+
+      <tr id="toc-row-37">
+        <th><a href="#slide37">有界类型参数</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+
+
+      <tr id="toc-row-38">
+        <th><a href="#slide38">运行结果</a></th>
+        <td><a href="#slide38">38</a></td>
+      </tr>
+
+
+      <tr id="toc-row-39">
+        <th><a href="#slide39">泛型类</a></th>
+        <td><a href="#slide39">39</a></td>
+      </tr>
+
+
+      <tr id="toc-row-40">
+        <th><a href="#slide40">泛型类</a></th>
+        <td><a href="#slide40">40</a></td>
+      </tr>
+
+
+      <tr id="toc-row-41">
+        <th><a href="#slide41">序列化</a></th>
+        <td><a href="#slide41">41</a></td>
+      </tr>
+
+
+      <tr id="toc-row-42">
+        <th><a href="#slide42">集合框架</a></th>
+        <td><a href="#slide42">42</a></td>
+      </tr>
+
+
+      <tr id="toc-row-43">
+        <th><a href="#slide43">map接口</a></th>
+        <td><a href="#slide43">43</a></td>
+      </tr>
+
+
+      <tr id="toc-row-44">
+        <th><a href="#slide44">TreeMap和HashMap类</a></th>
+        <td><a href="#slide44">44</a></td>
+      </tr>
+
+
+      <tr id="toc-row-45">
+        <th><a href="#slide45">HashMap</a></th>
+        <td><a href="#slide45">45</a></td>
+      </tr>
+
+
+      <tr id="toc-row-46">
+        <th><a href="#slide46">TreeMap</a></th>
+        <td><a href="#slide46">46</a></td>
+      </tr>
+
+
+      <tr id="toc-row-47">
+        <th><a href="#slide47">Collection接口</a></th>
+        <td><a href="#slide47">47</a></td>
+      </tr>
+
+
+      <tr id="toc-row-48">
+        <th><a href="#slide48">iterator接口</a></th>
+        <td><a href="#slide48">48</a></td>
+      </tr>
+
+
+      <tr id="toc-row-49">
+        <th><a href="#slide49">例子</a></th>
+        <td><a href="#slide49">49</a></td>
+      </tr>
+
+
+      <tr id="toc-row-50">
+        <th><a href="#slide50">List</a></th>
+        <td><a href="#slide50">50</a></td>
+      </tr>
+
+
+      <tr id="toc-row-51">
+        <th><a href="#slide51">list 方法</a></th>
+        <td><a href="#slide51">51</a></td>
+      </tr>
+
+
+      <tr id="toc-row-52">
+        <th><a href="#slide52">多线程</a></th>
+        <td><a href="#slide52">52</a></td>
+      </tr>
+
+
+      <tr id="toc-row-53">
+        <th><a href="#slide53">写java多线程的两种方法</a></th>
+        <td><a href="#slide53">53</a></td>
+      </tr>
+
+
+      <tr id="toc-row-54">
+        <th><a href="#slide54">继承thread类</a></th>
+        <td><a href="#slide54">54</a></td>
+      </tr>
+
+
+      <tr id="toc-row-55">
+        <th><a href="#slide55">实现Runnable接口</a></th>
+        <td><a href="#slide55">55</a></td>
+      </tr>
+
+
+      <tr id="toc-row-56">
+        <th><a href="#slide56">网络编程</a></th>
+        <td><a href="#slide56">56</a></td>
+      </tr>
+
+
+      <tr id="toc-row-57">
+        <th><a href="#slide57">I/O</a></th>
+        <td><a href="#slide57">57</a></td>
+      </tr>
+
+
+      <tr id="toc-row-58">
+        <th><a href="#slide58">android studio</a></th>
+        <td><a href="#slide58">58</a></td>
+      </tr>
+
+
+      <tr id="toc-row-59">
+        <th><a href="#slide59">作业</a></th>
+        <td><a href="#slide59">59</a></td>
+      </tr>
+
+
+      <tr id="toc-row-60">
+        <th><a href="#slide60">谢谢</a></th>
+        <td><a href="#slide60">60</a></td>
+      </tr>
+
+
+    </table>
+  </div>
+
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
